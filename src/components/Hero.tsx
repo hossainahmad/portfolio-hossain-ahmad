@@ -108,30 +108,33 @@ export function Hero({ onOpenResume }: HeroProps) {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-3">
-              {/* Resume Download / View Button */}
-              {onOpenResume ? (
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-3">
+              {/* Direct PDF Download Button */}
+              <a
+                href="/Hossain-Ahmad-Resume.pdf"
+                download="Hossain-Ahmad-Resume.pdf"
+                className="flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-sky-500 hover:from-cyan-400 hover:to-sky-400 text-slate-950 font-bold text-sm tracking-wide shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 transition-all transform hover:-translate-y-0.5 cursor-pointer"
+                title="Download single-page clean PDF"
+              >
+                <FileDown className="w-4 h-4 stroke-[2.5]" />
+                <span>Download Resume</span>
+              </a>
+
+              {/* View / Print CV Modal Trigger */}
+              {onOpenResume && (
                 <button
                   onClick={onOpenResume}
-                  className="flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-sky-500 hover:from-cyan-400 hover:to-sky-400 text-slate-950 font-bold text-sm tracking-wide shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 transition-all transform hover:-translate-y-0.5 cursor-pointer"
+                  className="flex items-center gap-2 px-4 py-3.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-cyan-400 border border-cyan-500/30 hover:border-cyan-400 font-semibold text-sm transition-all shadow-md cursor-pointer"
+                  title="Preview & Print Curriculum Vitae"
                 >
-                  <FileDown className="w-4 h-4 stroke-[2.5]" />
-                  <span>Download Resume</span>
+                  <span>View / Print CV</span>
                 </button>
-              ) : (
-                <a
-                  href="#resume"
-                  className="flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-sky-500 hover:from-cyan-400 hover:to-sky-400 text-slate-950 font-bold text-sm tracking-wide shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 transition-all transform hover:-translate-y-0.5"
-                >
-                  <FileDown className="w-4 h-4 stroke-[2.5]" />
-                  <span>Download Resume</span>
-                </a>
               )}
 
               {/* Projects Button */}
               <Link
                 href="#projects"
-                className="flex items-center gap-2 px-6 py-3.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-200 border border-slate-700/80 hover:border-cyan-500/40 font-semibold text-sm transition-all shadow-md hover:shadow-cyan-950/20 transform hover:-translate-y-0.5"
+                className="flex items-center gap-2 px-5 py-3.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-200 border border-slate-700/80 hover:border-cyan-500/40 font-semibold text-sm transition-all shadow-md hover:shadow-cyan-950/20 transform hover:-translate-y-0.5"
               >
                 <span>View Projects</span>
                 <ArrowRight className="w-4 h-4 text-cyan-400" />

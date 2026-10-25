@@ -60,3 +60,48 @@
   box-shadow: 0 10px 30px -10px rgba(6, 182, 212, 0.15);
   transform: translateY(-2px);
 }
+
+/* ==========================================================
+   PRINT STYLES: Isolates ONLY the Resume (1-2 pages maximum)
+   Completely hides the 15-page website, hero, navbar, and footer
+   ========================================================== */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 8mm 10mm;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+    color: #111827 !important;
+    font-size: 10pt !important;
+    line-height: 1.35 !important;
+    overflow: visible !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Force hide all standard website sections */
+  header,
+  footer,
+  nav,
+  .print-hidden,
+  .print\:hidden {
+    display: none !important;
+  }
+
+  /* Prevent awkward page breaks inside resume cards or sections */
+  .resume-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Force print color fidelity */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}

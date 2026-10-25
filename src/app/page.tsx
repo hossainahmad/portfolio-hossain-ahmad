@@ -17,36 +17,43 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#090d16] text-slate-100 selection:bg-cyan-500 selection:text-slate-950 flex flex-col justify-between">
-      {/* 1. Responsive Navbar with Resume Download Trigger */}
-      <Navbar onOpenResume={() => setIsResumeOpen(true)} />
+      {/* 
+        Main Website Content:
+        Explicitly marked `print:hidden` so that when a visitor prints/saves the resume,
+        only the dedicated Resume document is printed (1-2 pages), not the 15 pages of website sections!
+      */}
+      <div className="print:hidden flex flex-col min-h-screen justify-between">
+        {/* 1. Responsive Navbar with Resume Download Trigger */}
+        <Navbar onOpenResume={() => setIsResumeOpen(true)} />
 
-      <main className="flex-grow">
-        {/* 2 & 3 & 4. Designation, Introduction, Hero, Photo, Resume Button, Social Links */}
-        <Hero onOpenResume={() => setIsResumeOpen(true)} />
+        <main className="flex-grow">
+          {/* 2 & 3 & 4. Designation, Introduction, Hero, Photo, Resume Button, Social Links */}
+          <Hero onOpenResume={() => setIsResumeOpen(true)} />
 
-        {/* 5. About Me Section (Journey, Work enjoyed, Hobbies, Personality) */}
-        <About />
+          {/* 5. About Me Section (Journey, Work enjoyed, Hobbies, Personality) */}
+          <About />
 
-        {/* 6. Skills Section (Graphical format, Categorized) */}
-        <Skills />
+          {/* 6. Skills Section (Graphical format, Categorized) */}
+          <Skills />
 
-        {/* 7. Educational Qualification (Completed education above HSC) */}
-        <Education />
+          {/* 7. Educational Qualification (Completed education above HSC) */}
+          <Education />
 
-        {/* 8. Professional Experience (GCC Assistant Programmer & Independent Dev) */}
-        <Experience />
+          {/* 8. Professional Experience (GCC Assistant Programmer & Independent Dev) */}
+          <Experience />
 
-        {/* 9. Projects Section (At least 3 projects, Cards, View More / Details) */}
-        <Projects />
+          {/* 9. Projects Section (At least 3 projects, Cards, View More / Details) */}
+          <Projects />
 
-        {/* 10. Contact Information (Email, Phone, WhatsApp, Form) */}
-        <Contact />
-      </main>
+          {/* 10. Contact Information (Email, Phone, WhatsApp, Form) */}
+          <Contact />
+        </main>
 
-      {/* 11. Footer */}
-      <Footer />
+        {/* 11. Footer */}
+        <Footer />
+      </div>
 
-      {/* 3 & Resume Viewer/Downloader Modal */}
+      {/* 3. Resume Viewer/Downloader Modal (Styled specifically for clean 1-2 page printing) */}
       <ResumeModal
         isOpen={isResumeOpen}
         onClose={() => setIsResumeOpen(false)}

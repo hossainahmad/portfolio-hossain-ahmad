@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X, FileDown, ExternalLink, Code2, Sparkles } from "lucide-react";
 import { PERSONAL_INFO } from "@/data/portfolioData";
+import Image from "next/image";
 
 interface NavbarProps {
   onOpenResume?: () => void;
@@ -23,7 +24,14 @@ export function Navbar({ onOpenResume }: NavbarProps) {
       }
 
       // Check current visible section
-      const sections = ["about", "skills", "education", "experience", "projects", "contact"];
+      const sections = [
+        "about",
+        "skills",
+        "education",
+        "experience",
+        "projects",
+        "contact",
+      ];
       const scrollPosition = window.scrollY + 160;
 
       for (const sectionId of sections) {
@@ -67,7 +75,7 @@ export function Navbar({ onOpenResume }: NavbarProps) {
             href="/"
             className="group flex items-center gap-3 transition-transform hover:scale-[1.02]"
           >
-            <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 via-indigo-500 to-purple-600 p-[1px] shadow-md shadow-cyan-500/20">
+            {/* <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 via-indigo-500 to-purple-600 p-[1px] shadow-md shadow-cyan-500/20">
               <div className="w-full h-full bg-[#090d16] rounded-xl flex items-center justify-center">
                 <span className="font-mono font-bold text-lg bg-gradient-to-r from-cyan-400 to-indigo-300 bg-clip-text text-transparent">
                   HA
@@ -82,7 +90,13 @@ export function Navbar({ onOpenResume }: NavbarProps) {
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                 Full-Stack Dev
               </span>
-            </div>
+            </div> */}
+            <Image
+              src="/logo2-removebg-preview.png"
+              width={250}
+              height={80}
+              alt="Hossain Ahmad Portfolio Website"
+            ></Image>
           </Link>
 
           {/* Desktop Navigation Links */}
@@ -140,7 +154,11 @@ export function Navbar({ onOpenResume }: NavbarProps) {
             className="md:hidden p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white focus:outline-none"
             aria-label="Toggle navigation menu"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
       </div>
