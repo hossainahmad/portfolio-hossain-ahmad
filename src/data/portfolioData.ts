@@ -66,6 +66,7 @@ export const PERSONAL_INFO = {
   currentRole: "Assistant Programmer at Gazipur City Corporation",
   email: "hossain.ahmad38@gmail.com",
   phone: "+880 1551810331",
+  whatsappUrl: "https://wa.me/8801551810331",
   location: "Gazipur, Dhaka, Bangladesh",
   coords: "24.0031° N, 90.4203° E",
   github: "https://github.com/hossainahmad",
