@@ -37,8 +37,10 @@ export function Hero({ onOpenResume }: HeroProps) {
     if (!isDeleting && displayedRole === current) {
       timeout = setTimeout(() => setIsDeleting(true), 2000);
     } else if (isDeleting && displayedRole === "") {
-      setIsDeleting(false);
-      setRoleIndex((prev) => (prev + 1) % ROLES.length);
+      timeout = setTimeout(() => {
+        setIsDeleting(false);
+        setRoleIndex((prev) => (prev + 1) % ROLES.length);
+      }, 30);
     } else {
       const speed = isDeleting ? 30 : 70;
       timeout = setTimeout(() => {
@@ -73,7 +75,7 @@ export function Hero({ onOpenResume }: HeroProps) {
             <div className="space-y-3">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
                 Hi, I&apos;m{" "}
-                <span className="bg-gradient-to-r from-cyan-400 via-sky-300 to-indigo-400 bg-clip-text text-transparent">
+                <span className="bg-linear-to-r from-cyan-400 via-sky-300 to-indigo-400 bg-clip-text text-transparent">
                   {PERSONAL_INFO.name}
                 </span>
               </h1>
@@ -107,6 +109,16 @@ export function Hero({ onOpenResume }: HeroProps) {
             {/* CTA Buttons */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-3">
               {/* Direct PDF Download Button */}
+              {onOpenResume && (
+                <button
+                  onClick={onOpenResume}
+                  className="flex items-center gap-2 px-4 py-3.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-cyan-400 border border-cyan-500/30 hover:border-cyan-400 font-semibold text-sm transition-all shadow-md cursor-pointer"
+                  title="Preview & Print Curriculum Vitae"
+                >
+                  <FileDown className="w-4 h-4" />
+                  <span>View / Print CV</span>
+                </button>
+              )}
 
               {/* Projects Button */}
               <Link
@@ -183,11 +195,11 @@ export function Hero({ onOpenResume }: HeroProps) {
           <div className="lg:col-span-5 flex justify-center relative">
             <div className="relative w-72 sm:w-80 md:w-96 aspect-square">
               {/* Outer Glow Halo */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 via-indigo-500/20 to-purple-500/20 rounded-3xl blur-2xl transform scale-105" />
+              <div className="absolute inset-0 bg-linear-to-tr from-cyan-500/20 via-indigo-500/20 to-purple-500/20 rounded-3xl blur-2xl transform scale-105" />
 
               {/* Main Photo Card Frame */}
               <div className="relative w-full h-full rounded-3xl bg-slate-900 p-3 border border-slate-700/80 shadow-2xl shadow-cyan-950/30 overflow-hidden group">
-                <div className="relative w-full h-full rounded-2xl overflow-hidden bg-gradient-to-b from-slate-800 to-slate-950">
+                <div className="relative w-full h-full rounded-2xl overflow-hidden bg-linear-to-b from-slate-800 to-slate-950">
                   <Image
                     src={PERSONAL_INFO.avatar}
                     alt={PERSONAL_INFO.name}
@@ -198,7 +210,7 @@ export function Hero({ onOpenResume }: HeroProps) {
                   />
 
                   {/* Gradient overlay at bottom of photo */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#090d16] via-transparent to-transparent opacity-80" />
+                  <div className="absolute inset-0 bg-linear-to-t from-[#090d16] via-transparent to-transparent opacity-80" />
 
                   {/* Identification ribbon at bottom */}
                   <div className="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-slate-900/90 backdrop-blur-md border border-slate-700/80 shadow-lg">
@@ -254,7 +266,7 @@ export function Hero({ onOpenResume }: HeroProps) {
         {/* Highlight Stats Strip */}
         <div className="mt-16 sm:mt-20 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           <div className="glass-panel p-5 rounded-2xl border border-slate-800/90 text-center sm:text-left">
-            <p className="text-3xl sm:text-4xl font-extrabold text-transparent bg-gradient-to-r from-cyan-400 to-sky-300 bg-clip-text font-mono">
+            <p className="text-3xl sm:text-4xl font-extrabold text-transparent bg-linear-to-r from-cyan-400 to-sky-300 bg-clip-text font-mono">
               {PERSONAL_INFO.experienceYears}
             </p>
             <p className="text-xs sm:text-sm font-medium text-slate-300 mt-1">
@@ -266,7 +278,7 @@ export function Hero({ onOpenResume }: HeroProps) {
           </div>
 
           <div className="glass-panel p-5 rounded-2xl border border-slate-800/90 text-center sm:text-left">
-            <p className="text-3xl sm:text-4xl font-extrabold text-transparent bg-gradient-to-r from-emerald-400 to-teal-300 bg-clip-text font-mono">
+            <p className="text-3xl sm:text-4xl font-extrabold text-transparent bg-linear-to-r from-emerald-400 to-teal-300 bg-clip-text font-mono">
               {PERSONAL_INFO.projectsCompleted}
             </p>
             <p className="text-xs sm:text-sm font-medium text-slate-300 mt-1">
@@ -278,7 +290,7 @@ export function Hero({ onOpenResume }: HeroProps) {
           </div>
 
           {/* <div className="glass-panel p-5 rounded-2xl border border-slate-800/90 text-center sm:text-left">
-            <p className="text-3xl sm:text-4xl font-extrabold text-transparent bg-gradient-to-r from-indigo-400 to-purple-300 bg-clip-text font-mono">
+            <p className="text-3xl sm:text-4xl font-extrabold text-transparent bg-linear-to-r from-indigo-400 to-purple-300 bg-clip-text font-mono">
               {PERSONAL_INFO.citizensServed}
             </p>
             <p className="text-xs sm:text-sm font-medium text-slate-300 mt-1">
@@ -290,7 +302,7 @@ export function Hero({ onOpenResume }: HeroProps) {
           </div> */}
 
           <div className="glass-panel p-5 rounded-2xl border border-slate-800/90 text-center sm:text-left">
-            <p className="text-3xl sm:text-4xl font-extrabold text-transparent bg-gradient-to-r from-amber-400 to-orange-300 bg-clip-text font-mono">
+            <p className="text-3xl sm:text-4xl font-extrabold text-transparent bg-linear-to-r from-amber-400 to-orange-300 bg-clip-text font-mono">
               100%
             </p>
             <p className="text-xs sm:text-sm font-medium text-slate-300 mt-1">
