@@ -65,33 +65,33 @@ export const PERSONAL_INFO = {
   designation: "Full-Stack Web Developer",
   currentRole: "Assistant Programmer at Gazipur City Corporation",
   email: "hossain.ahmad38@gmail.com",
-  phone: "+880 1700-000000",
-  whatsapp: "+880 1700-000000",
-  whatsappUrl: "https://wa.me/8801700000000",
+  phone: "+880 1551810331",
   location: "Gazipur, Dhaka, Bangladesh",
   coords: "24.0031° N, 90.4203° E",
   github: "https://github.com/hossainahmad",
   linkedin: "https://www.linkedin.com/in/hossainahmad-dev/",
   twitter: "https://x.com/hossain888",
-  avatar: "/images/hossain-ahmad.png",
+  avatar: "/hossain-ahmad-Avatar-Portrait.png",
   logo: "/images/logo.png",
-  headline: "Crafting resilient, high-performance web applications and civic digital infrastructure.",
+  headline:
+    "Crafting resilient, high-performance web applications and civic digital infrastructure.",
   shortBio:
     "Full-Stack Web Developer and Assistant Programmer at Gazipur City Corporation. I specialize in building scalable web architectures with React, Next.js, TypeScript, Node.js, and MongoDB, bridging civic responsibility with modern software engineering.",
   availability: "Open to High-Impact Opportunities & Collaborations",
   experienceYears: "3+",
   projectsCompleted: "10+",
   citizensServed: "2M+",
-  philosophy: "Don't just learn a technology — build something meaningful with it.",
+  philosophy:
+    "Don't just learn a technology — build something meaningful with it.",
 };
 
 export const ABOUT_DETAILS = {
   journey: `My journey into web development began with a deep fascination with how code turns into real-world tools that people use every day. Starting from foundational web technologies (HTML, CSS, modern JavaScript ES6+), I quickly advanced into full-scale modern software engineering with TypeScript, React, Next.js, and Node.js. 
 
 Today, as an Assistant Programmer at Gazipur City Corporation, I work at the intersection of civic infrastructure and modern software systems. Writing software for a metropolitan city of over two million citizens has instilled a relentless commitment to reliability, data integrity, clean architecture, and performance. Outside my public-sector work, I continuously design, engineer, and ship full-stack web applications to solve real-world problems.`,
-  
+
   workEnjoy: `I thrive on end-to-end product development — from schema modeling and API design to crafting buttery-smooth, accessible user interfaces. I take genuine satisfaction in solving thorny edge cases: building custom sorters that seamlessly understand Bengali numerals alongside Western digits, designing SSR-safe persistence layers in Next.js, or structuring component trees with strict unidirectional data flow. For me, good code is clean, readable, modular, and built to last.`,
-  
+
   hobbies: [
     {
       title: "Specialty Coffee ☕",
@@ -115,14 +115,16 @@ Today, as an Assistant Programmer at Gazipur City Corporation, I work at the int
 export const SKILL_CATEGORIES: SkillCategory[] = [
   {
     name: "Frontend Development",
-    description: "Modern, component-driven reactive user interfaces with strong type safety.",
+    description:
+      "Modern, component-driven reactive user interfaces with strong type safety.",
     skills: [
       {
         name: "React.js",
         level: 90,
         status: "Advanced",
         icon: "Atom",
-        description: "Functional components, custom hooks, Context API, state management, memoization.",
+        description:
+          "Functional components, custom hooks, Context API, state management, memoization.",
         tags: ["React 19", "Hooks", "Virtual DOM", "SPA"],
       },
       {
@@ -130,7 +132,8 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
         level: 88,
         status: "Advanced",
         icon: "Globe",
-        description: "App Router, Server Components, SSR/SSG, Server Actions, Route Handlers.",
+        description:
+          "App Router, Server Components, SSR/SSG, Server Actions, Route Handlers.",
         tags: ["App Router", "SSR", "SEO", "Optimization"],
       },
       {
@@ -138,7 +141,8 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
         level: 85,
         status: "Proficient",
         icon: "Code2",
-        description: "Type safety, generics, interfaces, strict type checking, union types.",
+        description:
+          "Type safety, generics, interfaces, strict type checking, union types.",
         tags: ["Type Safety", "Generics", "TSConfig"],
       },
       {
@@ -146,7 +150,8 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
         level: 92,
         status: "Advanced",
         icon: "FileCode",
-        description: "Async/Await, Promises, Event Loop, Closures, DOM manipulation.",
+        description:
+          "Async/Await, Promises, Event Loop, Closures, DOM manipulation.",
         tags: ["ES6+", "Async", "Prototypes", "Modules"],
       },
       {
@@ -154,7 +159,8 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
         level: 92,
         status: "Advanced",
         icon: "Palette",
-        description: "Responsive layouts, utility-first CSS, custom design tokens, dark mode.",
+        description:
+          "Responsive layouts, utility-first CSS, custom design tokens, dark mode.",
         tags: ["Tailwind v4", "Flexbox/Grid", "Responsive", "Glassmorphism"],
       },
       {
@@ -162,21 +168,24 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
         level: 95,
         status: "Expert",
         icon: "Layout",
-        description: "Semantic markup, CSS Grid, Flexbox, transitions, accessibility (a11y).",
+        description:
+          "Semantic markup, CSS Grid, Flexbox, transitions, accessibility (a11y).",
         tags: ["Semantic HTML", "CSS Grid", "Animations", "a11y"],
       },
     ],
   },
   {
     name: "Backend & Database",
-    description: "Scalable server logic, robust authentication, and persistent data storage.",
+    description:
+      "Scalable server logic, robust authentication, and persistent data storage.",
     skills: [
       {
         name: "Node.js & Express",
         level: 84,
         status: "Proficient",
         icon: "Server",
-        description: "RESTful API development, middleware, authentication flows, error handling.",
+        description:
+          "RESTful API development, middleware, authentication flows, error handling.",
         tags: ["Node.js", "Express", "REST APIs", "Middleware"],
       },
       {
@@ -184,7 +193,8 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
         level: 85,
         status: "Proficient",
         icon: "Database",
-        description: "Document data modeling, native Node.js driver, aggregation pipelines, indexing.",
+        description:
+          "Document data modeling, native Node.js driver, aggregation pipelines, indexing.",
         tags: ["MongoDB Atlas", "NoSQL", "Aggregation", "Indexes"],
       },
       {
@@ -192,7 +202,8 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
         level: 82,
         status: "Proficient",
         icon: "ShieldCheck",
-        description: "OAuth 2.0 (Google, GitHub), session management, password hashing, secure cookies.",
+        description:
+          "OAuth 2.0 (Google, GitHub), session management, password hashing, secure cookies.",
         tags: ["Better Auth", "OAuth", "Sessions", "Security"],
       },
       {
@@ -200,21 +211,24 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
         level: 88,
         status: "Advanced",
         icon: "Network",
-        description: "Stateless architecture, HTTP verbs, payload validation, status codes, pagination.",
+        description:
+          "Stateless architecture, HTTP verbs, payload validation, status codes, pagination.",
         tags: ["REST", "CRUD", "JSON", "API Contracts"],
       },
     ],
   },
   {
     name: "Tools & DevOps",
-    description: "Version control, automated pipelines, deployment, and developer toolchains.",
+    description:
+      "Version control, automated pipelines, deployment, and developer toolchains.",
     skills: [
       {
         name: "Git & GitHub",
         level: 90,
         status: "Advanced",
         icon: "GitBranch",
-        description: "Branching strategies, PR workflows, code reviews, rebase, merge conflict resolution.",
+        description:
+          "Branching strategies, PR workflows, code reviews, rebase, merge conflict resolution.",
         tags: ["Git", "GitHub", "Version Control", "Collaboration"],
       },
       {
@@ -222,7 +236,8 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
         level: 88,
         status: "Advanced",
         icon: "Cloud",
-        description: "Continuous deployment (CI/CD), environment variable management, serverless edge.",
+        description:
+          "Continuous deployment (CI/CD), environment variable management, serverless edge.",
         tags: ["Vercel", "Netlify", "CI/CD", "Serverless"],
       },
       {
@@ -230,7 +245,8 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
         level: 94,
         status: "Expert",
         icon: "Terminal",
-        description: "Debugging, linting (ESLint), code formatting (Prettier), command line CLI.",
+        description:
+          "Debugging, linting (ESLint), code formatting (Prettier), command line CLI.",
         tags: ["VS Code", "ESLint", "Prettier", "npm/pnpm"],
       },
       {
@@ -238,21 +254,24 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
         level: 78,
         status: "Experienced",
         icon: "Layers",
-        description: "Wireframing, UI prototyping, responsive grid layouts, design handoff.",
+        description:
+          "Wireframing, UI prototyping, responsive grid layouts, design handoff.",
         tags: ["Figma", "Design", "Wireframes", "Prototyping"],
       },
     ],
   },
   {
     name: "Engineering Practices",
-    description: "Core software engineering disciplines that ensure durable, maintainable software.",
+    description:
+      "Core software engineering disciplines that ensure durable, maintainable software.",
     skills: [
       {
         name: "Clean Code & Refactoring",
         level: 90,
         status: "Advanced",
         icon: "CheckCircle2",
-        description: "DRY, SOLID principles, modular component hierarchy, readable naming.",
+        description:
+          "DRY, SOLID principles, modular component hierarchy, readable naming.",
         tags: ["SOLID", "DRY", "Readability", "Modularity"],
       },
       {
@@ -260,7 +279,8 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
         level: 86,
         status: "Proficient",
         icon: "Cpu",
-        description: "Lighthouse optimization, image lazy loading, metadata, bundle size reduction.",
+        description:
+          "Lighthouse optimization, image lazy loading, metadata, bundle size reduction.",
         tags: ["Lighthouse", "Core Web Vitals", "SEO", "Speed"],
       },
       {
@@ -268,8 +288,14 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
         level: 94,
         status: "Expert",
         icon: "Smartphone",
-        description: "Adaptive layouts across phones, tablets, laptops, and ultra-wide displays.",
-        tags: ["Mobile First", "Cross Browser", "Touch Events", "Fluid Typography"],
+        description:
+          "Adaptive layouts across phones, tablets, laptops, and ultra-wide displays.",
+        tags: [
+          "Mobile First",
+          "Cross Browser",
+          "Touch Events",
+          "Fluid Typography",
+        ],
       },
     ],
   },
@@ -278,7 +304,8 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
 export const EDUCATIONS: EducationItem[] = [
   {
     id: "bsc-cse",
-    degree: "Bachelor of Science in Computer Science & Engineering (B.Sc. in CSE)",
+    degree:
+      "Bachelor of Science in Computer Science & Engineering (B.Sc. in CSE)",
     institution: "University of Repute",
     location: "Dhaka Division, Bangladesh",
     period: "Completed",
@@ -301,18 +328,18 @@ export const EDUCATIONS: EducationItem[] = [
   },
   {
     id: "hsc",
-    degree: "Higher Secondary Certificate (HSC)",
-    institution: "Prestigious College",
+    degree: "Diploma in Computer Science (HSC)",
+    institution: "Model Institute of Science & Technology",
     location: "Gazipur, Bangladesh",
     period: "Completed",
-    major: "Science Division",
+    major: "Computer Science",
     description:
-      "Rigorous pre-university academic curriculum focusing on Mathematics, Physics, Chemistry, and Information & Communication Technology (ICT).",
+      "Rigorous pre-university academic curriculum focusing on Computer Fundamentals & Architecture, Programming Languages, Data Structures & Algorithms, and Database Management Systems (DBMS).",
     keyCourses: [
-      "Higher Mathematics",
-      "Physics",
-      "Chemistry",
-      "Information & Communication Technology",
+      "Computer Fundamentals & Architecture",
+      "Data Structures & Algorithms",
+      "Computer Networks & Security",
+      "Operating Systems",
     ],
     highlights: [
       "Developed strong analytical, logical, and mathematical problem-solving skills.",
@@ -390,7 +417,14 @@ export const PROJECTS: Project[] = [
     cover: "/covers/bazar-dor.png",
     liveUrl: "https://bazar-dor-zeta-steel.vercel.app",
     githubUrl: "https://github.com/hossainahmad/bazar-dor",
-    stack: ["Next.js (App Router)", "React", "Better Auth", "MongoDB", "Tailwind CSS", "Sonner"],
+    stack: [
+      "Next.js (App Router)",
+      "React",
+      "Better Auth",
+      "MongoDB",
+      "Tailwind CSS",
+      "Sonner",
+    ],
     tags: ["Full-Stack", "Auth", "MongoDB", "Next.js", "Tailwind CSS"],
     featured: true,
     order: 1,
@@ -433,7 +467,13 @@ export const PROJECTS: Project[] = [
     cover: "/covers/fit-log.png",
     liveUrl: "https://fit-log-wheat-kappa.vercel.app",
     githubUrl: "https://github.com/hossainahmad/fit-log",
-    stack: ["Next.js", "React Context API", "Tailwind CSS", "Lucide React", "localStorage"],
+    stack: [
+      "Next.js",
+      "React Context API",
+      "Tailwind CSS",
+      "Lucide React",
+      "localStorage",
+    ],
     tags: ["Next.js", "React", "State Management", "Tailwind CSS"],
     featured: true,
     order: 2,
@@ -474,7 +514,13 @@ export const PROJECTS: Project[] = [
     cover: "/covers/devstack.png",
     liveUrl: "https://devstacktech.netlify.app",
     githubUrl: "https://github.com/hossainahmad/DevStack",
-    stack: ["React.js", "TypeScript", "Tailwind CSS", "DaisyUI", "React Toastify"],
+    stack: [
+      "React.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "DaisyUI",
+      "React Toastify",
+    ],
     tags: ["React", "TypeScript", "Tailwind CSS", "DaisyUI"],
     featured: true,
     order: 3,
